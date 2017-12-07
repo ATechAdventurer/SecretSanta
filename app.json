@@ -1,0 +1,7 @@
+{
+  "name": "Secret Santa Application",
+  "description": "A highly customizable secret santa app",
+  "repository": "https://github.com/manosteele91827/SecretSanta",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "static"]
+}
