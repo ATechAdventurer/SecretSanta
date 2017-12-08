@@ -2,6 +2,6 @@
   "name": "Secret Santa Application",
   "description": "A highly customizable secret santa app",
   "repository": "https://github.com/manosteele91827/SecretSanta",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
-  "keywords": ["node", "express", "static"]
+  "logo": "https://github.com/manosteele91827/SecretSanta/blob/master/assets/Secret%20Santa.png",
+  "keywords": ["node", "express", "heroku", "christmas", "secret-santa", "secret santa", "santa", "gift giving", "gift"]
 }
