@@ -1,7 +1,7 @@
 let config = {};
-const {title, gmailUser, gmailPassword, gmailFriendlyName} = process.env;
+const {TITLE, GMAIL_USER, GMAIL_PASS, GMAIL_FRIENDLY_NAME, ADMIN_PASS} = process.env;
 
-Object.assign(config, {title, gmailUser, gmailPassword, gmailFriendlyName});
+Object.assign(config, {TITLE, GMAIL_USER, GMAIL_PASS, GMAIL_FRIENDLY_NAME, ADMIN_PASS});
 
 
 

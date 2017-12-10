@@ -2,6 +2,28 @@
   "name": "Secret Santa Application",
   "description": "A highly customizable secret santa app",
   "repository": "https://github.com/manosteele91827/SecretSanta",
-  "logo": "https://github.com/manosteele91827/SecretSanta/blob/master/assets/Secret%20Santa.png",
-  "keywords": ["node", "express", "heroku", "christmas", "secret-santa", "secret santa", "santa", "gift giving", "gift"]
+  "logo": "https://github.com/manosteele91827/SecretSanta/raw/master/assets/Secret%20Santa@2x.png",
+  "keywords": ["node", "express", "heroku", "christmas", "secret-santa", "secret santa", "santa", "gift giving", "gift"],
+  "env": {
+    "TITLE": {
+      "description": "The title of your Application, this will be displayed on the pages that your users will see",
+      "value": "Office Secret Santa"
+      },
+    "GMAIL_USER": {
+      "description": "The gmail email that you will be sending your picks through",
+      "value": "test@gmail.com"
+      },
+    "GMAIL_PASS": {
+      "description": "The Gmail Account password",
+      "value": "password"
+      }, 
+    "GMAIL_FRIENDLY_NAME": {
+      "description": "The name of the inbox you are sending the email from",
+      "value": "Office Secret Santa Bot"
+      },
+    "ADMIN_PASS": {
+      "description": "The password that you will use to run the picking algorithm",
+      "value": "PLEASEchangeThis"
+    }
+  }
 }
