@@ -1,13 +1,13 @@
-//let execute = require('./execute');
+let execute = require('./execute');
 let storage = require('node-persist');
 let config = require('./config');
 let app = require('express')();
 let bodyParser = require('body-parser');
-
+let {TITLE, GMAIL_USER, GMAIL_PASS, GMAIL_FRIENDLY_NAME, ADMIN_PASS} = config;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/signup', function(req, res){
-  let {title} = config;
+  let {} = config;
   let body = `<html>
     <head>
       <title>${config.title}</title>
@@ -144,7 +144,7 @@ app.get('/signup', function(req, res){
         }</style>
     </head>
     <body>
-      <h2 class="heading">${config.title}</h2>
+      <h2 class="heading">${TITLE}</h2>
       <div class="holder">
     <div class="form-style">
         <form action="/signup" method="post">
@@ -162,6 +162,28 @@ app.get('/signup', function(req, res){
     </div>
     </body></html>`;
   res.send(body);
+});
+
+
+app.get('/admin', function(req, res) {
+  res.send(`
+  <form action="/admin" method="post">
+      <input type="password" name="password" placeholder="Password" required />
+      <center><input type="submit" value="Execute The Mailer" /></center>
+  </form>`);
+  
+});
+
+
+app.post('/admin', function(req, res) {
+  let {password} = req.body;
+  if(ADMIN_PASS === password){
+    execute();
+    res.send("Success");
+  }else{
+    res.send("Wrong Password");
+  }
+  
 });
 
 app.get('/test', function(req, res) {
