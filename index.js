@@ -200,6 +200,7 @@ app.post('/signup', function(req, res){
     data = []; 
   }
   data.push({firstName,lastName,email});
+  storage.setItemSync('users', data);
   let body = `
 <html>
   <head>
@@ -358,6 +359,6 @@ app.post('/signup', function(req, res){
     </div>
     </body>
 </html>`;
-  res.send();
+  res.send(body);
 });
 app.listen(8080);
